@@ -23,6 +23,9 @@ module.exports = function (eleventyConfig) {
     // Define passthrough for assets
     eleventyConfig.addPassthroughCopy("assets");
 
+    // Add watch target for CSS files (needed for CSS bundling in dev mode)
+    eleventyConfig.addWatchTarget("./assets/css/");
+
     // Add watch target for JS files (needed for JS bundling in dev mode)
     eleventyConfig.addWatchTarget("./assets/js/");
     // And to make this work we've to disable the .gitignore usage of eleventy.
